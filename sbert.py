@@ -1,6 +1,6 @@
 from sentence_transformers import SentenceTransformer
 from transformers import AutoTokenizer
-from articles import articles
+from other.articles import articles
 import numpy as np
 from utils import (
     array_to_str,
