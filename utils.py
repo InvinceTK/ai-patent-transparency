@@ -1,4 +1,6 @@
 import json
+import re
+
 def print_token_length(tokenizer, title,content):
     """
     Prints token length of an individual article
@@ -29,7 +31,7 @@ def get_patents_from_json():
 
     Output: 
     patent[]
-    
+
     Patent object:
         patent_id,
         bilio
@@ -62,3 +64,15 @@ def split_text_by_tokens(tokenizer, text, max_tokens):
         chunks.append(chunk_text)
 
     return chunks
+
+
+
+
+def visualise_dict(dict):
+
+    for k, v in dict.items():
+        print(f"{k}: {v.shape}, dtype={v.dtype}")
+
+def visualise_reg_dict(dict):
+    for k, v in dict.items():
+        print(k)
