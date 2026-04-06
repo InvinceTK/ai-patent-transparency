@@ -25,7 +25,7 @@ def array_to_str(arr):
     
     return text
 
-def get_patents_from_json():
+def get_patents_from_json(filepath):
     """
     Description: Reads patent data from sample.json
 
@@ -40,8 +40,8 @@ def get_patents_from_json():
         claims
 
     """
-
-    with open ("sample.json","r") as f:
+    print("Opening")
+    with open (f"{filepath}.json","r") as f:
         data = json.load(f)
 
     return data
@@ -64,9 +64,6 @@ def split_text_by_tokens(tokenizer, text, max_tokens):
         chunks.append(chunk_text)
 
     return chunks
-
-
-
 
 def visualise_dict(dict):
 
